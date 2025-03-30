@@ -346,7 +346,7 @@ function checkResult() {
     } else if (E > I) {
         resultText += "E";
     } else {
-        resultText += "(IE)";
+        resultText += "I";
     }
 
     if (S > N) {
@@ -354,7 +354,7 @@ function checkResult() {
     } else if (N > S) {
         resultText += "N";
     } else {
-        resultText += "(SN)";
+        resultText += "S";
     }
 
     if (T > F) {
@@ -362,7 +362,7 @@ function checkResult() {
     } else if (F > T) {
         resultText += "F";
     } else {
-        resultText += "(TF)";
+        resultText += "T";
     }
 
     if (J > P) {
@@ -370,7 +370,7 @@ function checkResult() {
     } else if (P > J) {
         resultText += "P";
     } else {
-        resultText += "(JP)";
+        resultText += "J";
     }
 
     document.getElementById("result").innerText = resultText;

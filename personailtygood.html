@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Program</title>
+</head>
+<body>
+    <h3>Answer the questions to determine your personality:</h3>
+    <ul>
+        <li>
+            <h4>1. I would rather</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question1" value="N" onclick="updateScore('N')" /> Solve a new and complicated problem.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question1" value="S" onclick="updateScore('S')" /> Work on something I have done before.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>2. I like to</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question2" value="I" onclick="updateScore('I')" /> Work alone in a quiet place.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question2" value="E" onclick="updateScore('E')" /> Be where the action is.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>3. I want a boss who</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question3" value="T" onclick="updateScore('T')" /> Establishes and applies criteria in decisions.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question3" value="F" onclick="updateScore('F')" /> Considers individual needs and makes exceptions.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>4. When I work on a project, I</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question4" value="J" onclick="updateScore('J')" /> Like to finish it and get some closure.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question4" value="P" onclick="updateScore('P')" /> Often leave it open for possible changes.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>5. When making a decision, the most important considerations are</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question5" value="T" onclick="updateScore('T')" /> Rational thoughts, ideas, and data.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question5" value="F" onclick="updateScore('F')" /> People’s feelings and values.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>6. On a project, I tend to</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question6" value="N" onclick="updateScore('N')" /> Think it over and over before deciding how to proceed.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question6" value="S" onclick="updateScore('S')" /> Start working on it right away, thinking about it as I go along.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>7. When working on a project, I prefer to</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question7" value="J" onclick="updateScore('J')" /> Maintain as much control as possible.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question7" value="P" onclick="updateScore('P')" /> Explore various options.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>8. In my work, I prefer to</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question8" value="P" onclick="updateScore('P')" /> Work on several projects at a time and learn as much as possible about each one.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question8" value="J" onclick="updateScore('J')" /> Have one project that is challenging and keeps me busy.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>9. I often</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question9" value="J" onclick="updateScore('J')" /> Make lists and plans whenever I start something and may have to seriously alter my plans.</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question9" value="P" onclick="updateScore('P')" /> Avoid plans and just let things progress as I work on them.</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>10. When discussing a problem with colleagues, it is easy for me to</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question10" value="N" onclick="updateScore('N')" /> See “the big picture.”</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question10" value="S" onclick="updateScore('S')" /> Grasp the specifics of the situation.</label>
+                </li>
+            </ul>
+        </li>
+            
+        <li>
+           <li>
+            <h4>11. When the phone rings in my office or at home, I usually</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question11" value="I" onclick="updateScore('I')" /> Consider it an interruption.</label></li>
+                <li><label><input type="radio" name="question11" value="E" onclick="updateScore('E')" /> Don’t mind answering it.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>12. Which word describes you better?</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question12" value="T" onclick="updateScore('T')" /> Analytical</label></li>
+                <li><label><input type="radio" name="question12" value="F" onclick="updateScore('F')" /> Empathetic</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>13. When I am working on an assignment, I tend to</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question13" value="S" onclick="updateScore('S')" /> Work steadily and consistently.</label></li>
+                <li><label><input type="radio" name="question13" value="N" onclick="updateScore('N')" /> Work in bursts of energy with “down time” in between.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>14. When I listen to someone talk on a subject, I usually try to</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question14" value="F" onclick="updateScore('F')" /> Relate it to my own experience and see if it fits.</label></li>
+                <li><label><input type="radio" name="question14" value="T" onclick="updateScore('T')" /> Assess and analyze the message.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>15. When I come up with new ideas, I generally</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question15" value="E" onclick="updateScore('E')" /> “Go for it.”</label></li>
+                <li><label><input type="radio" name="question15" value="I" onclick="updateScore('I')" /> Like to contemplate the ideas some more.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>16. When working on a project, I prefer to</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question16" value="S" onclick="updateScore('S')" /> Narrow the scope so it is clearly defined.</label></li>
+                <li><label><input type="radio" name="question16" value="N" onclick="updateScore('N')" /> Broaden the scope to include related aspects.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>17. When I read something, I usually</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question17" value="S" onclick="updateScore('S')" /> Confine my thoughts to what is written there.</label></li>
+                <li><label><input type="radio" name="question17" value="N" onclick="updateScore('N')" /> Read between the lines and relate the words to other ideas.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>18. When I have to make a decision in a hurry, I often</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question18" value="P" onclick="updateScore('P')" /> Feel uncomfortable and wish I had more information.</label></li>
+                <li><label><input type="radio" name="question18" value="J" onclick="updateScore('J')" /> Am able to do so with available data.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>19. In a meeting, I tend to</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question19" value="E" onclick="updateScore('E')" /> Continue formulating my ideas as I talk about them.</label></li>
+                <li><label><input type="radio" name="question19" value="I" onclick="updateScore('I')" /> Only speak out after I have carefully thought the issue through.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>20. At work, I prefer spending a great deal of time on issues of</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question20" value="T" onclick="updateScore('T')" /> Ideas.</label></li>
+                <li><label><input type="radio" name="question20" value="F" onclick="updateScore('F')" /> People.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>21. In meetings, I am most often annoyed with people who</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question21" value="S" onclick="updateScore('S')" /> Come up with many sketchy ideas.</label></li>
+                <li><label><input type="radio" name="question21" value="N" onclick="updateScore('N')" /> Lengthen meetings with many practical suggestions.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>22. I am a</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question22" value="I" onclick="updateScore('I')" /> Morning person.</label></li>
+                <li><label><input type="radio" name="question22" value="E" onclick="updateScore('E')" /> Night owl.</label></li>
+            </ul>
+        </li>
+        <li>
+             <li>
+            <h4>23. What is your style in preparing for a meeting?</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question23" value="P" onclick="updateScore('P')" /> I am willing to go in and be responsive.</label></li>
+                <li><label><input type="radio" name="question23" value="J" onclick="updateScore('J')" /> I like to be fully prepared and usually sketch an outline of the meeting.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>24. In a meeting, I would prefer for people to</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question24" value="F" onclick="updateScore('F')" /> Display a fuller range of emotions.</label></li>
+                <li><label><input type="radio" name="question24" value="T" onclick="updateScore('T')" /> Be more task-oriented.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>25. I would rather work for an organization where</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question25" value="T" onclick="updateScore('T')" /> My job was intellectually stimulating.</label></li>
+                <li><label><input type="radio" name="question25" value="F" onclick="updateScore('F')" /> I was committed to its goals and mission.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>26. On weekends, I tend to</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question26" value="J" onclick="updateScore('J')" /> Plan what I will do.</label></li>
+                <li><label><input type="radio" name="question26" value="P" onclick="updateScore('P')" /> Just see what happens and decide as I go along.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>27. I am more</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question27" value="E" onclick="updateScore('E')" /> Outgoing.</label></li>
+                <li><label><input type="radio" name="question27" value="I" onclick="updateScore('I')" /> Contemplative.</label></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>28. I would rather work for a boss who is</h4>
+            <ul class="choices">
+                <li><label><input type="radio" name="question28" value="N" onclick="updateScore('N')" /> Full of new ideas.</label></li>
+                <li><label><input type="radio" name="question28" value="S" onclick="updateScore('S')" /> Practical.</label></li>
+            </ul>
+        </li>
+        <li>
+            <h4>29. Choose the word that appeals to you more:</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question29" value="F" onclick="updateScore('F')" />Social</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question29" value="T" onclick="updateScore('T')" /> Theoretical</label>
+                </li>
+            </ul>
+        </li> 
+       <li>
+            <h4>30. Choose the word that appeals to you more:</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question30" value="N" onclick="updateScore('N')" /> Ingenuity</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question30" value="S" onclick="updateScore('S')" /> Practicality</label>
+                </li>
+            </ul>
+        </li> 
+        <li>
+            <h4>31. Choose the word that appeals to you more:</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question31" value="J" onclick="updateScore('J')" /> Organized </label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question31" value="P" onclick="updateScore('P')" /> Adaptable</label>
+                </li>
+            </ul>
+        </li> 
+        <li>
+            <h4>32. Choose the word that appeals to you more:</h4>
+            <ul class="choices">
+                <li>
+                    <label><input type="radio" name="question32" value="E" onclick="updateScore('E')" /> Active </label>
+                </li>
+                <li>
+                    <label><input type="radio" name="question32" value="I" onclick="updateScore('I')" /> Concentration</label>
+                </li>
+            </ul>
+        </li> 
+</ul>
+        </li> 
+
+    </ul> 
+
+    <button onclick="checkResult()">Check Result</button>
+    <p id="result"></p>
+
+    <script>
+        let I = 0, E = 0, J = 0, P = 0, S = 0, N = 0, T = 0, F = 0; 
+
+        function updateScore(choice) {
+            if (choice === 'I') {
+                I++;
+            } else if (choice === 'E') {
+                E++;
+            } else if (choice === 'J') {
+                J++;
+            } else if (choice === 'P') {
+                P++;
+            } else if (choice === 'S') {
+                S++;
+            } else if (choice === 'N') {
+                N++;
+            } else if (choice === 'T') {
+                T++;
+            } else if (choice === 'F') {
+                F++;
+            }
+        }
+
+function checkResult() {
+    let resultText = "Your type is: ";
+
+    if (I > E) {
+        resultText += "I";
+    } else if (E > I) {
+        resultText += "E";
+    } else {
+        resultText += "(IE)";
+    }
+
+    if (S > N) {
+        resultText += "S";
+    } else if (N > S) {
+        resultText += "N";
+    } else {
+        resultText += "(SN)";
+    }
+
+    if (T > F) {
+        resultText += "T";
+    } else if (F > T) {
+        resultText += "F";
+    } else {
+        resultText += "(TF)";
+    }
+
+    if (J > P) {
+        resultText += "J";
+    } else if (P > J) {
+        resultText += "P";
+    } else {
+        resultText += "(JP)";
+    }
+
+    document.getElementById("result").innerText = resultText;
+}
+    </script>
+</body>
+</html>
